@@ -5,11 +5,12 @@ import AddTodo from './AddTodo'
 import Todo from './Todo'
 
 const mapStateToProps = state => ({
-    todos: state.todos
+    todos: state.todos,
+    userI: state.userInformation
 })
 
-const ReactRedux = ({ todos }) => {
-    console.log(todos);
+const ReactRedux = ({ todos, userI }) => {
+    //console.log(userI);
     return (
         <div className="container">
             <div className="row">
@@ -22,7 +23,7 @@ const ReactRedux = ({ todos }) => {
                         </li>
                         <li className="list-group-item"><AddTodo /></li>
                         {todos.map(todo => <Todo key={todo.id} todoData={todo} />)}
-                        {todos.length == 0 && <li className="list-group-item">
+                        {todos.length === 0 && <li className="list-group-item">
                             <p className="text-center">Todo list empty</p>
                         </li>}
                     </ul>

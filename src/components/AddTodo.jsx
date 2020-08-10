@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as ActionCreactors from './ActionCreactors'
 
 const AddTodo = ({ dispatch }) => {
-    let input
+    let input;
     return (
         <form onSubmit={e => {
             e.preventDefault()

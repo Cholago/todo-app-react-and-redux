@@ -39,8 +39,8 @@ const todos = (state = [], action) => {
 //Second reducer user informtion
 const userInformation = (state = false, action) => {
     switch (action.type) {
-        case 'SET_VISIBILITY_FILTER':
-            return action.filter
+        case actions.SET_USER:
+            return action.payload.user
         default:
             return state
     }

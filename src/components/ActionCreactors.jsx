@@ -38,38 +38,11 @@ export const bugToggled = id => (
 
 );
 
-/*
-
-export function bugAdded(description) {
-    Store.dispatch(
-        {
-            type: actions.BUG_ADDED,
-            payload: {
-                description: description
-            }
+export const setUSer = user => (
+    {
+        type: actions.SET_USER,
+        payload: {
+            user: user
         }
-    );
-}
-
-export function bugRemoved(id) {
-    Store.dispatch(
-        {
-            type: actions.BUG_REMOVED,
-            payload: {
-                id: id
-            }
-        }
-    );
-}
-
-export function bugResolved(id) {
-    Store.dispatch(
-        {
-            type: actions.BUG_RESOLVED,
-            payload: {
-                id: id
-            }
-        }
-    );
-}
-*/
+    }
+);
